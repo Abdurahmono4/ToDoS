@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 0 20px;
+  background: url("../images/background.svg");
+  align-items: center;
+  justify-content: center;
+}
+.container-s {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 0 20px;
+  background: url("../images/darkBack.jpg");
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  width: 541px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first__section {
+  display: flex;
+}
+
+/* [dark-theme="light"] {
+  background: url("../images/background.svg");
+}
+
+[dark-theme="dark"] {
+  background: url("../images/darkBack.jpg");
+} */
+
+#theme:checked ~ .theme__label {
+  display: none;
+}
+
+.moon {
+  display: none;
+}
+#theme:checked ~ .theme__label:last-child {
+  display: block !important;
+}
+
+#theme:checked ~ .theme__label > .moon {
+  display: block;
+}
+
+#theme:checked ~ .theme__label > .sun {
+  display: none;
+}
+
+/* #theme:checked ~ .container {
+  background: url("../images/darkBack.jpg");
+  display: block;
+} */
+
+#theme:unchecked ~ .theme__label > .sun {
+  display: block;
+}
+
+#theme:unchecked ~ .theme__label > .moon {
+  display: none;
+}
+
+.checkbox {
+  display: block;
+}
+
+.second__section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
