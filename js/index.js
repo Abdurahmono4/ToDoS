@@ -38,9 +38,13 @@ function addNewTodo(todo) {
   const todoTemplate = document.querySelector("#todoTemplate");
 
   const cloneTemplate = todoTemplate.content.cloneNode(true);
-  console.log(todo);
+
   cloneTemplate.querySelector("#todoTitle").innerText = todo.inputValue;
   tasks.appendChild(cloneTemplate);
 }
 
 renderTodosUI(todos);
+
+const removeButton = document.getElementById("todoRemoveButton");
+
+removeButton.addEventListener("click", () => {});

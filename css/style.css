@@ -45,7 +45,7 @@ body {
   width: 541px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
+
   justify-content: space-between;
   align-items: center;
 }
@@ -181,14 +181,13 @@ input[data-title]:hover::after {
 .list {
   gap: 5px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
   width: 540px;
   border-radius: 5px;
   height: 64px;
   align-items: center;
-  justify-content: start;
-  display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
@@ -196,6 +195,18 @@ input[data-title]:hover::after {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.removeButton {
+  margin-right: 5px;
+  border: none;
+  padding: 8px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+}
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
@@ -226,9 +237,19 @@ input[type="checkbox"]:checked + label {
 
 #tasks {
   width: 390px;
+  margin-top: 10px;
   height: 40px;
   font-weight: 400;
   font-size: 18px;
   border: none;
+  margin-left: 280px;
   line-height: 18px;
+}
+
+.removeButton {
+  margin-right: 15px;
+}
+
+.hidden {
+  display: none;
 }
